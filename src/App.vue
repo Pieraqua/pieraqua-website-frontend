@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import {ref} from 'vue';
+import {api} from './environment.js';
 const isLoading  = ref<boolean>(true);
 const msg  = ref<string>("");
 
 async function getData()
 {
   try {
-    const response = (await fetch('http://localhost:8080/'));
+    const response = (await fetch(api));
     const text = await response.text();
     msg.value = text;
   } catch(e) {
