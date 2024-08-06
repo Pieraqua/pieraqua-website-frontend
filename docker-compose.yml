@@ -2,7 +2,7 @@ version: '1.0'
 
 services:
   pieraqua-frontend:
-      image: pieraqua-website/frontend-app
+      image: pieraqua/pieraqua-website:frontend-app
       build:
         context: .
         dockerfile: ./Dockerfile
