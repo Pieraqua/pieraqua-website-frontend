@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import {ref} from 'vue';
 import {api} from './environment.js';
+import { RouterView } from 'vue-router';
 const isLoading  = ref<boolean>(true);
 const blogs  = ref<Array<string>>([]);
 
@@ -23,21 +24,29 @@ getData()
 </script>
 
 <template>
-  <header>
-    <h1>Bem vindo ao meu site pessoal!</h1>
-    <div>
-    </div>
-  </header>
-
-  <main>
-    <div v-if="!isLoading">
-      <div v-for="item in blogs">
-        <h3>{{ item }}</h3>
-      </div>
-    </div>
-  </main>
+  <div class="app">
+    <nav>
+      <RouterLink to="/"><p>Sobre</p></RouterLink>
+      <RouterLink to="/blog"><p>Blogs</p></RouterLink>
+    </nav>
+    <RouterView/>
+  </div>
 </template>
 
 <style scoped>
-
+nav p
+{
+  padding-right: 20px;
+  display: inline-block;
+}
+.app
+{
+  background-color: lightgray;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding-left: 5%;
+}
 </style>
