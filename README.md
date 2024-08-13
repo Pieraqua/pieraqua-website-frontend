@@ -1,12 +1,8 @@
 # pieraqua-website-frontend
 
-This template should help get you started developing with Vue 3 in Vite.
+Site pessoal para me motivar a escrever sobre quaisquer coisas que venham na minha cabeça.
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+## Setup do Projeto
 
 ```sh
 npm install
